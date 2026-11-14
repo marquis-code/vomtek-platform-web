@@ -15,11 +15,11 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Vomtek — pipeline integrity, without the black hole',
+      title: 'Vomtek | Control panels, electronics and industrial service in Houston',
       htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'theme-color', content: '#07100e' },
-        { name: 'description', content: 'Vomtek unifies pipeline inspection, pigging, utility diagnostics, marketplace procurement and contractor workflows in one platform.' },
+        { name: 'description', content: 'Vomtek designs and builds control panels, electronics, wire harnesses and motor systems in Houston, with field service and pipeline inspection.' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -37,9 +37,9 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Vomtek — Pipeline Intelligence',
+      name: 'Vomtek | Industrial Engineering',
       short_name: 'Vomtek',
-      description: 'Pipeline diagnostics, integrity reports and utility workflows.',
+      description: 'Control panels, electronics, motor service, fabrication and pipeline inspection.',
       theme_color: '#07100e',
       background_color: '#f1ede2',
       display: 'standalone',
