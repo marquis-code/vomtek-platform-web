@@ -62,13 +62,13 @@ function draw() {
     ctx.beginPath(); ctx.arc(x, y, props.compact ? 4 : 5, 0, Math.PI * 2)
     ctx.fillStyle = color; ctx.fill()
     if (!props.compact) {
-      ctx.fillStyle = color; ctx.font = '9px "IBM Plex Mono", monospace'
+      ctx.fillStyle = color; ctx.font = '9px "Inter", monospace'
       ctx.fillText(`${depth.toFixed(0)}%`, x + 6, y - 8 - bar)
     }
   })
 
   ctx.fillStyle = dark ? 'rgba(248,245,236,.4)' : 'rgba(7,16,14,.45)'
-  ctx.font = '9px "IBM Plex Mono", monospace'
+  ctx.font = '9px "Inter", monospace'
   ctx.fillText('0 km', pad, h - 12)
   ctx.fillText(`${props.lengthKm} km`, w - pad - 34, h - 12)
   if (!props.compact) {

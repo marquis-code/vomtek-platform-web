@@ -110,5 +110,5 @@ onUnmounted(unbindPosition)
 .select-trigger:hover { border-color:rgba(7,16,14,.32); }
 .select-trigger:focus, .select-trigger-open { border-color:#007d48; box-shadow:0 0 0 3px rgba(0,125,72,.12); }
 .select-trigger:disabled { opacity:.5; cursor:not-allowed; }
-.select-trigger-compact { min-height:2rem; border-radius:.4rem; padding:0 .55rem; font-family:"IBM Plex Mono",monospace; font-size:.62rem; letter-spacing:.06em; text-transform:uppercase; width:auto; }
+.select-trigger-compact { min-height:2rem; border-radius:.4rem; padding:0 .55rem; font-family:"Inter",monospace; font-size:.62rem; letter-spacing:.06em; text-transform:uppercase; width:auto; }
 </style>

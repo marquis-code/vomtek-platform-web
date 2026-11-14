@@ -23,8 +23,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'preload', href: '/fonts/clash-display-600.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/satoshi-400.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/manrope-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/inter-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },

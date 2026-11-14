@@ -17,7 +17,8 @@ const related = computed(() => divisions.filter(d => d.slug !== division.value?.
       <div class="wrap grid items-center gap-10 py-14 md:py-20 lg:grid-cols-12">
         <div class="lg:col-span-7">
           <p class="label-mono text-vomtek">Vomtek division · {{ division.index }}</p>
-          <h1 class="type-page-hero mt-4 max-w-[13ch]">{{ division.shortName }}.<br><span class="text-vomtek">{{ division.tagline }}</span></h1>
+          <h1 class="type-page-hero mt-4 max-w-[13ch]">{{ division.shortName }}.</h1>
+          <p class="mt-4 max-w-[24ch] font-display text-[clamp(1.8rem,2.8vw,2.5rem)] font-bold leading-[1.05] tracking-[-.02em] text-vomtek">{{ division.tagline }}</p>
           <p class="mt-5 max-w-xl text-[17.5px] leading-relaxed text-ink/70">{{ division.description }}</p>
           <div class="mt-7 flex flex-wrap gap-2"><NuxtLink to="/contact" class="btn btn-brand">Request a quote <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/services" class="btn btn-outline">All capabilities</NuxtLink></div>
           <div class="mt-8 grid max-w-2xl grid-cols-3 gap-4 border-t border-ink/10 pt-5"><div v-for="item in division.proof" :key="item.label"><p class="font-display text-[20px] font-semibold">{{ item.value }}</p><p class="label-mono mt-1 text-ink/65">{{ item.label }}</p></div></div>
