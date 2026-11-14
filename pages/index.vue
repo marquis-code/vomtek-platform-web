@@ -72,6 +72,6 @@ const industries = [{ name: 'Water & wastewater', icon: Droplets }, { name: 'Ene
       </div>
     </section>
 
-    <section class="relative overflow-hidden bg-signal text-ink"><div class="wrap grid items-center gap-8 py-14 md:grid-cols-[1fr_auto] md:py-20"><div><p class="label-mono">Start with a conversation</p><h2 class="mt-3 max-w-[18ch] font-display text-[clamp(2.4rem,4.5vw,4.2rem)] font-semibold leading-[.95] tracking-[-.05em]">Tell us what you need built, repaired or inspected.</h2></div><div class="flex flex-wrap gap-2 md:justify-end"><NuxtLink to="/contact" class="btn btn-dark">Request a quote <ArrowUpRight :size="14" /></NuxtLink><a href="tel:+17133471466" class="btn bg-white text-ink">Call 713-347-1466</a></div></div></section>
+    <section class="relative overflow-hidden bg-ink text-bone"><div class="wrap grid items-center gap-8 py-14 md:grid-cols-[1fr_auto] md:py-20"><div><p class="label-mono text-mint">Start with a conversation</p><h2 class="mt-3 max-w-[18ch] font-display text-[clamp(2.4rem,4.5vw,4.2rem)] font-semibold leading-[.95] tracking-[-.05em]">Tell us what you need built, repaired or inspected.</h2></div><div class="flex flex-wrap gap-2 md:justify-end"><NuxtLink to="/contact" class="btn btn-mint">Request a quote <ArrowUpRight :size="14" /></NuxtLink><a href="tel:+17133471466" class="btn btn-outline-dark">Call 713-347-1466</a></div></div></section>
   </div>
 </template>
