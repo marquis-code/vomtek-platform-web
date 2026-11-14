@@ -7,8 +7,7 @@ withDefaults(defineProps<{ tone?: 'dark' | 'light'; compact?: boolean }>(), { to
       <img src="/images/vomtek-logo.png" alt="Vomtek" width="40" height="40" class="size-full object-cover" />
     </span>
     <span v-if="!compact" class="leading-none">
-      <span class="block font-display text-[19px] font-extrabold tracking-[-.02em]" :class="tone === 'dark' ? 'text-ink' : 'text-bone'">VOMTEK</span>
-      <span class="mt-1 block font-sans text-[9px] font-semibold uppercase tracking-[.14em]" :class="tone === 'dark' ? 'text-ink/70' : 'text-bone/70'">Industrial engineering</span>
+      <span class="block font-display text-[20px] font-extrabold tracking-[-.015em]" :class="tone === 'dark' ? 'text-ink' : 'text-bone'">VOMTEK</span>
     </span>
   </NuxtLink>
 </template>
