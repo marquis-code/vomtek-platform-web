@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ArrowUpRight } from 'lucide-vue-next'
-useSeoMeta({ title: 'News & Notes | Vomtek', description: 'Updates from Vomtek across control systems, electronics, motor service, fabrication and pipeline inspection.' })
+useSeoMeta({ title: 'News & Notes | Vomtek', description: 'Updates from Vomtek across control systems, electronics, fabrication and pipeline inspection.' })
 const notes = [
-  { tag: 'Company', title: 'A clearer Vomtek', text: 'We have brought our divisions into one place so customers can see the full capability of the Houston team.', body: 'Control systems, electrical, electronics, motor service, fabrication and pipeline inspection now sit under one Vomtek story. The work has not changed — the way we explain it has.' },
+  { tag: 'Company', title: 'A clearer Vomtek', text: 'We have brought our divisions into one place so customers can see the full capability of the Houston team.', body: 'Control systems, electrical, electronics, fabrication and pipeline inspection now sit under one Vomtek story. The work has not changed — the way we explain it has.' },
   { tag: 'Pipeline', title: 'The pipeline portal is live', text: 'Operators and homeowners can now upload an inspection, view a report and manage repair work in one account.', body: 'Vomtek Pipeline includes operator reporting, home drain checks, parts, tool rentals and a contractor network. It remains a division of Vomtek, not a separate company.' },
   { tag: 'Control systems', title: 'What a useful panel drawing includes', text: 'A good drawing is more than a schematic. It is the maintenance team’s map when something stops.', body: 'We include wire numbers, device labels, terminal details, bill of materials and a test record with every panel. It takes a little longer at build time and saves hours later.' },
 ]

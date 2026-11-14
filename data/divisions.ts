@@ -13,6 +13,7 @@ export type Division = {
   industries: string[]
   proof: { value: string; label: string }[]
   featured?: boolean
+  visible?: boolean
 }
 
 export const divisions: Division[] = [
@@ -33,7 +34,7 @@ export const divisions: Division[] = [
     summary: 'Electrical design, panel assembly, motor and transformer repair, installations and maintenance.',
     description: 'Vomtek supports the electrical side of an industrial site — from power distribution and control wiring to troubleshooting, repairs and planned maintenance. We work on new builds, upgrades and emergency fixes.',
     image: 'electrician-meter', imageAlt: 'Electrician testing an electrical panel',
-    capabilities: ['Electrical design and drawings', 'Power distribution and switchgear', 'Electrical panel assembly and repair', 'Transformer and motor repair', 'Electrical wiring and installations', 'Preventive maintenance', 'Breakdown response'],
+    capabilities: ['Electrical design and drawings', 'Power distribution and switchgear', 'Electrical panel assembly and repair', 'Transformer repair', 'Electrical wiring and installations', 'Preventive maintenance', 'Breakdown response'],
     outcomes: ['Fewer unplanned electrical stops', 'Clear drawings and panel labels', 'Repairs that match the original design', 'A local team for planned and urgent work'],
     industries: ['Water and wastewater', 'Energy', 'Manufacturing', 'Commercial facilities', 'Municipal infrastructure'],
     proof: [{ value: 'Design', label: 'and build' }, { value: 'Repair', label: 'and maintenance' }, { value: 'Field', label: 'service' }], featured: true,
@@ -58,7 +59,7 @@ export const divisions: Division[] = [
     capabilities: ['AC, DC, servo and stepper repair', 'Spindle motor rewinding', 'Motor testing and load checks', 'Transformer repair', 'Custom test equipment', 'Pickup and delivery', 'On-site troubleshooting'],
     outcomes: ['A tested motor, not just a repaired one', 'Faster return to production', 'A repair record for your maintenance file', 'Field help when the problem is not the motor'],
     industries: ['Manufacturing', 'Water and wastewater', 'Energy', 'Food processing', 'Facilities'],
-    proof: [{ value: 'AC / DC', label: 'motor repair' }, { value: 'Rewind', label: 'and test' }, { value: 'Field', label: 'support' }], featured: true,
+    proof: [{ value: 'AC / DC', label: 'motor repair' }, { value: 'Rewind', label: 'and test' }, { value: 'Field', label: 'support' }], featured: true, visible: false,
   },
   {
     slug: 'fabrication', index: '05', name: 'Mechanical & Fabrication', shortName: 'Fabrication',
@@ -88,5 +89,7 @@ export const extraDivisions = [
   { slug: 'automotive', name: 'Vomtek Automotive', group: 'Group company', summary: 'Vehicle repair and maintenance in Lagos, Nigeria.', image: 'machine-team' },
   { slug: 'facilities', name: 'Facilities & Real Estate', group: 'Group capability', summary: 'Electrical and mechanical support for property and facility teams.', image: 'houston-office' },
 ]
+
+export const activeDivisions = divisions.filter(d => d.visible !== false)
 
 export const divisionBySlug = (slug: string) => divisions.find(d => d.slug === slug)

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ArrowUpRight, Building2, Check, CircuitBoard, Cog, Droplets, Factory, Flame, Gauge, Hammer, Radar, UtensilsCrossed, Wrench, Zap } from 'lucide-vue-next'
-import { divisions } from '~/data/divisions'
+import { activeDivisions } from '~/data/divisions'
 
 useSeoMeta({
   title: 'Vomtek | Control panels, electronics and industrial service',
-  description: 'Vomtek designs and builds custom control panels, electronics, wire harnesses and motor systems, with field service and pipeline inspection under one roof.',
+  description: 'Vomtek designs and builds custom control panels, electronics, wire harnesses and fabricated equipment, with field service and pipeline inspection under one roof.',
 })
 
-const icons = [Gauge, Wrench, CircuitBoard, Cog, Hammer, Radar]
+const icons: Record<string, any> = { 'control-systems': Gauge, electrical: Wrench, electronics: CircuitBoard, 'motor-service': Cog, fabrication: Hammer, pipeline: Radar }
 const process = [
   { n: '01', title: 'Talk through the problem', text: 'Tell us what the equipment needs to do, what is failing, or what you are replacing. We ask the practical questions first.' },
   { n: '02', title: 'Engineer the solution', text: 'We produce the drawings, panel layout, parts list and scope. You approve the design before anything is built.' },
@@ -23,11 +23,11 @@ const industries = [{ name: 'Water & wastewater', icon: Droplets }, { name: 'Ene
 
     <section class="section-y border-y border-ink/10 bg-bone">
       <div class="wrap">
-        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><SectionLabel index="01">What we do</SectionLabel><h2 class="mt-6 type-lg max-w-[14ch]">Six capabilities. One place to call.</h2></div><p class="max-w-sm text-[16px] leading-relaxed text-ink/70">From a single replacement panel to a full equipment build, the work stays inside one team.</p></div>
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><SectionLabel index="01">What we do</SectionLabel><h2 class="mt-6 type-lg max-w-[14ch]">Five capabilities. One place to call.</h2></div><p class="max-w-sm text-[16px] leading-relaxed text-ink/70">From a single replacement panel to a full equipment build, the work stays inside one team.</p></div>
         <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          <NuxtLink v-for="(division, i) in divisions" :key="division.slug" :to="`/divisions/${division.slug}`" class="group overflow-hidden rounded-2xl border border-ink/12 bg-white transition-all hover:-translate-y-1 hover:border-ink/30 hover:shadow-[0_24px_50px_-35px_rgba(7,16,14,.5)]">
+          <NuxtLink v-for="(division, i) in activeDivisions" :key="division.slug" :to="`/divisions/${division.slug}`" class="group overflow-hidden rounded-2xl border border-ink/12 bg-white transition-all hover:-translate-y-1 hover:border-ink/30 hover:shadow-[0_24px_50px_-35px_rgba(7,16,14,.5)]">
             <div class="relative h-44 overflow-hidden"><PhotoImage :name="division.image" :alt="division.imageAlt" sizes="(min-width:1280px) 30vw, (min-width:768px) 50vw, 100vw" class="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" /><span class="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[.08em] text-ink backdrop-blur">{{ division.index }}</span></div>
-            <div class="p-5"><div class="flex items-start justify-between gap-3"><h3 class="max-w-[17ch] font-display text-[22px] font-semibold leading-[1.05] tracking-[-.03em]">{{ division.shortName }}</h3><component :is="icons[i]" :size="18" class="mt-1 shrink-0 text-ink/25 transition-colors group-hover:text-vomtek" /></div><p class="mt-2 text-[14.5px] leading-relaxed text-ink/70">{{ division.summary }}</p><span class="mt-4 inline-flex items-center gap-1.5 font-mono text-[10.5px] uppercase tracking-[.1em] text-vomtek">Explore division <ArrowUpRight :size="11" /></span></div>
+            <div class="p-5"><div class="flex items-start justify-between gap-3"><h3 class="max-w-[17ch] font-display text-[22px] font-semibold leading-[1.05] tracking-[-.03em]">{{ division.shortName }}</h3><component :is="icons[division.slug]" :size="18" class="mt-1 shrink-0 text-ink/25 transition-colors group-hover:text-vomtek" /></div><p class="mt-2 text-[14.5px] leading-relaxed text-ink/70">{{ division.summary }}</p><span class="mt-4 inline-flex items-center gap-1.5 font-mono text-[10.5px] uppercase tracking-[.1em] text-vomtek">Explore division <ArrowUpRight :size="11" /></span></div>
           </NuxtLink>
         </div>
       </div>

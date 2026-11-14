@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ArrowUpRight, Check } from 'lucide-vue-next'
-import { divisions, divisionBySlug } from '~/data/divisions'
+import { activeDivisions, divisionBySlug } from '~/data/divisions'
 const route = useRoute()
 const division = computed(() => divisionBySlug(String(route.params.slug)))
-if (!division.value) throw createError({ statusCode: 404, statusMessage: 'Division not found' })
+if (!division.value || division.value.visible === false) throw createError({ statusCode: 404, statusMessage: 'Division not found' })
 useSeoMeta({
   title: () => `${division.value?.name} | Vomtek`,
   description: () => division.value?.summary || '',
 })
-const related = computed(() => divisions.filter(d => d.slug !== division.value?.slug).slice(0, 3))
+const related = computed(() => activeDivisions.filter(d => d.slug !== division.value?.slug).slice(0, 3))
 </script>
 
 <template>

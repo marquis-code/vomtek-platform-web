@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowUpRight, ChevronDown, Menu, Phone, ShieldCheck, X } from 'lucide-vue-next'
-import { divisions } from '~/data/divisions'
+import { activeDivisions } from '~/data/divisions'
 
 const open = ref(false)
 const divisionsOpen = ref(false)
@@ -14,10 +14,10 @@ const links = [
 ]
 const groups = [
   { label: 'Engineering & controls', slugs: ['control-systems', 'electrical'] },
-  { label: 'Electronics & manufacturing', slugs: ['electronics', 'motor-service', 'fabrication'] },
+  { label: 'Electronics & manufacturing', slugs: ['electronics', 'fabrication'] },
   { label: 'Inspection & property', slugs: ['pipeline'] },
 ]
-const groupItems = (slugs: string[]) => slugs.map(slug => divisions.find(d => d.slug === slug)!).filter(Boolean)
+const groupItems = (slugs: string[]) => slugs.map(slug => activeDivisions.find(d => d.slug === slug)!).filter(Boolean)
 const groupCompanies = [
   { label: 'Vomtek Automotive', to: '/divisions/automotive', meta: 'Lagos, Nigeria' },
   { label: 'Facilities & Real Estate', to: '/divisions/facilities', meta: 'Group capability' },

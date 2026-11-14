@@ -23,16 +23,6 @@ const slides = [
     to: '/divisions/electronics',
   },
   {
-    kicker: 'Motor service',
-    title: 'Motors tested before they return.',
-    body: 'AC, DC, servo, stepper and spindle motor repair and rewinding, with load testing and on-site field support.',
-    chips: ['AC / DC motors', 'Servo & spindle', 'Rewind & test'],
-    image: 'motor-rewind',
-    alt: 'Technician rewinding an industrial motor',
-    cta: 'See motor service',
-    to: '/divisions/motor-service',
-  },
-  {
     kicker: 'Pipeline inspection',
     title: 'Findings turned into a repair plan.',
     body: 'Inspection data reviewed into a ranked defect list. Parts, rentals and contractor work stay connected to the same asset record.',

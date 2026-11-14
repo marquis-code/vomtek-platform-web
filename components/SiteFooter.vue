@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowUpRight } from 'lucide-vue-next'
-import { divisions, extraDivisions } from '~/data/divisions'
+import { activeDivisions, extraDivisions } from '~/data/divisions'
 const year = new Date().getFullYear()
 </script>
 <template>
@@ -10,13 +10,13 @@ const year = new Date().getFullYear()
         <div class="lg:col-span-5">
           <p class="label-mono text-mint">Engineering & manufacturing</p>
           <h2 class="mt-5 max-w-[14ch] font-display text-[clamp(2.6rem,4.6vw,4.2rem)] font-semibold leading-[.94] tracking-[-.05em]">Built here.<br><span class="text-mint">Running everywhere.</span></h2>
-          <p class="mt-5 max-w-md text-[16px] leading-relaxed text-bone/75">Control panels, electronics, motor service, fabrication and pipeline inspection — one team from drawing to startup.</p>
+          <p class="mt-5 max-w-md text-[16px] leading-relaxed text-bone/75">Control panels, electronics, fabrication and pipeline inspection — one team from drawing to startup.</p>
           <div class="mt-7 flex flex-wrap gap-2"><NuxtLink to="/contact" class="btn btn-mint">Request a quote <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/services" class="btn btn-outline-dark">Explore capabilities</NuxtLink></div>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
           <div>
             <p class="label-mono text-bone/55">Divisions</p>
-            <ul class="mt-5 space-y-2.5"><li v-for="division in divisions" :key="division.slug"><NuxtLink :to="`/divisions/${division.slug}`" class="text-[15px] text-bone/70 transition-colors hover:text-mint">{{ division.shortName }}</NuxtLink></li></ul>
+            <ul class="mt-5 space-y-2.5"><li v-for="division in activeDivisions" :key="division.slug"><NuxtLink :to="`/divisions/${division.slug}`" class="text-[15px] text-bone/70 transition-colors hover:text-mint">{{ division.shortName }}</NuxtLink></li></ul>
           </div>
           <div>
             <p class="label-mono text-bone/55">Company</p>
@@ -33,7 +33,7 @@ const year = new Date().getFullYear()
           <div>
             <p class="label-mono text-bone/55">Capabilities</p>
             <ul class="mt-5 space-y-2.5 text-[15px] text-bone/70">
-              <li>UL 508A panel shop</li><li>PCB & harness</li><li>Motor repair</li><li>CNC & fabrication</li><li>Field service</li><li>Pipeline inspection</li>
+              <li>UL 508A panel shop</li><li>PCB & harness</li><li>CNC & fabrication</li><li>Field service</li><li>Pipeline inspection</li>
             </ul>
             <p class="mt-5 label-mono text-bone/55">Group</p>
             <ul class="mt-3 space-y-2"><li v-for="item in extraDivisions" :key="item.slug"><NuxtLink :to="`/divisions/${item.slug}`" class="text-[14px] text-bone/65 hover:text-mint">{{ item.name }}</NuxtLink></li></ul>
