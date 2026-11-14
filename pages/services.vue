@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ArrowUpRight, Check } from 'lucide-vue-next'
 import { divisions } from '~/data/divisions'
-useSeoMeta({ title: 'Engineering & Manufacturing Services | Vomtek Houston', description: 'Control panels, electrical engineering, PCB and harness, motor repair, fabrication and pipeline inspection from one Houston team.' })
+useSeoMeta({ title: 'Engineering & Manufacturing Services | Vomtek', description: 'Control panels, electrical engineering, PCB and harness, motor repair, fabrication and pipeline inspection from one team.' })
 const groups = [
   { title: 'Design & build', text: 'New equipment, replacement panels and one-off electronic assemblies.', slugs: ['control-systems', 'electronics', 'fabrication'] },
   { title: 'Repair & service', text: 'Keep existing equipment running with repair, testing and field support.', slugs: ['electrical', 'motor-service'] },

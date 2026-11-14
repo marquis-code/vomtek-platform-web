@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowUpRight, ChevronDown, MapPin, Menu, Phone, ShieldCheck, X } from 'lucide-vue-next'
+import { ArrowUpRight, ChevronDown, Menu, Phone, ShieldCheck, X } from 'lucide-vue-next'
 import { divisions, extraDivisions } from '~/data/divisions'
 
 const open = ref(false)
@@ -20,7 +20,7 @@ watch(() => route.fullPath, () => { open.value = false; divisionsOpen.value = fa
   <header class="sticky top-0 z-50 border-b border-ink/10 bg-white/95 backdrop-blur-xl">
     <div class="hidden border-b border-ink/8 bg-ink text-bone md:block">
       <div class="wrap flex h-8 items-center justify-between font-mono text-[12px] uppercase tracking-[.12em]">
-        <div class="flex items-center gap-5 text-bone/70"><span class="flex items-center gap-1.5"><MapPin :size="10" /> Houston, Texas</span><span class="flex items-center gap-1.5"><ShieldCheck :size="10" /> UL 508A panel shop</span></div>
+        <div class="flex items-center gap-5 text-bone/70"><span class="flex items-center gap-1.5"><ShieldCheck :size="10" /> UL 508A panel shop</span></div>
         <div class="flex items-center gap-5"><a :href="`tel:+17133471466`" class="flex items-center gap-1.5 text-bone/70 hover:text-white"><Phone :size="10" /> 713-347-1466</a></div>
       </div>
     </div>

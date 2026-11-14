@@ -8,7 +8,7 @@ const year = new Date().getFullYear()
     <div class="wrap relative border-b border-bone/10 py-16 md:py-20">
       <div class="grid gap-12 lg:grid-cols-12">
         <div class="lg:col-span-5">
-          <p class="label-mono text-mint">Houston engineering & manufacturing</p>
+          <p class="label-mono text-mint">Engineering & manufacturing</p>
           <h2 class="mt-5 max-w-[14ch] font-display text-[clamp(2.6rem,4.6vw,4.2rem)] font-semibold leading-[.94] tracking-[-.05em]">Built here.<br><span class="text-mint">Running everywhere.</span></h2>
           <p class="mt-5 max-w-md text-[16px] leading-relaxed text-bone/75">Control panels, electronics, motor service, fabrication and pipeline inspection — one team from drawing to startup.</p>
           <div class="mt-7 flex flex-wrap gap-2"><NuxtLink to="/contact" class="btn btn-mint">Request a quote <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/services" class="btn btn-outline-dark">Explore capabilities</NuxtLink></div>

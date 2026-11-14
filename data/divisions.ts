@@ -20,12 +20,12 @@ export const divisions: Division[] = [
     slug: 'control-systems', index: '01', name: 'Control Systems & Instrumentation', shortName: 'Control Systems',
     tagline: 'Panels designed, wired, tested and supported.',
     summary: 'Custom UL 508A control panels, PLC/HMI systems, instrumentation and startup support.',
-    description: 'We design and build the control system behind your process — from the electrical drawing to the panel, the field wiring and the first day of operation. Every panel is built, labelled and tested in our Houston shop before it ships.',
+    description: 'We design and build the control system behind your process — from the electrical drawing to the panel, the field wiring and the first day of operation. Every panel is built, labelled and tested in our shop before it ships.',
     image: 'panel-assembly', imageAlt: 'Custom control panel being assembled and wired',
     capabilities: ['Custom control panel design', 'UL 508A panel assembly', 'PLC, HMI and SCADA panels', 'VFD, MCC and motor control', 'Instrument and junction panels', 'Point-to-point wiring and testing', 'Installation, startup and documentation'],
     outcomes: ['One team from drawing to startup', 'Panels tested before they leave the shop', 'Documentation your maintenance team can use', 'Support after the line is running'],
     industries: ['Water and wastewater', 'Energy and utilities', 'Food and beverage', 'Manufacturing', 'Oil and gas'],
-    proof: [{ value: 'UL 508A', label: 'panel shop' }, { value: 'In-house', label: 'design and build' }, { value: 'Houston', label: 'assembly floor' }], featured: true,
+    proof: [{ value: 'UL 508A', label: 'panel shop' }, { value: 'In-house', label: 'design and build' }, { value: 'Tested', label: 'before delivery' }], featured: true,
   },
   {
     slug: 'electrical', index: '02', name: 'Electrical Engineering', shortName: 'Electrical',
@@ -36,7 +36,7 @@ export const divisions: Division[] = [
     capabilities: ['Electrical design and drawings', 'Power distribution and switchgear', 'Electrical panel assembly and repair', 'Transformer and motor repair', 'Electrical wiring and installations', 'Preventive maintenance', 'Breakdown response'],
     outcomes: ['Fewer unplanned electrical stops', 'Clear drawings and panel labels', 'Repairs that match the original design', 'A local team for planned and urgent work'],
     industries: ['Water and wastewater', 'Energy', 'Manufacturing', 'Commercial facilities', 'Municipal infrastructure'],
-    proof: [{ value: 'Design', label: 'and build' }, { value: 'Repair', label: 'and maintenance' }, { value: 'Local', label: 'Houston response' }], featured: true,
+    proof: [{ value: 'Design', label: 'and build' }, { value: 'Repair', label: 'and maintenance' }, { value: 'Field', label: 'service' }], featured: true,
   },
   {
     slug: 'electronics', index: '03', name: 'Electronics & Harness', shortName: 'Electronics',

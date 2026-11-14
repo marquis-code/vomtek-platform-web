@@ -15,14 +15,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Vomtek | Control panels, electronics and industrial service in Houston',
+      title: 'Vomtek | Control panels, electronics and industrial service',
       htmlAttrs: { lang: 'en' },
       meta: [
-        { name: 'theme-color', content: '#07100e' },
-        { name: 'description', content: 'Vomtek designs and builds control panels, electronics, wire harnesses and motor systems in Houston, with field service and pipeline inspection.' },
+        { name: 'theme-color', content: '#111612' },
+        { name: 'description', content: 'Vomtek designs and builds control panels, electronics, wire harnesses and motor systems, with field service and pipeline inspection.' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'preload', href: '/fonts/manrope-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/inter-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
       ],
@@ -40,8 +40,8 @@ export default defineNuxtConfig({
       name: 'Vomtek | Industrial Engineering',
       short_name: 'Vomtek',
       description: 'Control panels, electronics, motor service, fabrication and pipeline inspection.',
-      theme_color: '#07100e',
-      background_color: '#f1ede2',
+      theme_color: '#111612',
+      background_color: '#f2f4ee',
       display: 'standalone',
       start_url: '/',
       icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }],

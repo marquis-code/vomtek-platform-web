@@ -16,7 +16,7 @@ function draw() {
   const w = rect.width, h = rect.height
   const dark = props.tone === 'dark'
   ctx.clearRect(0, 0, w, h)
-  ctx.fillStyle = dark ? '#0b1713' : '#f8f5ec'
+  ctx.fillStyle = dark ? '#18201a' : '#fbfcf8'
   ctx.fillRect(0, 0, w, h)
 
   const pad = props.compact ? 16 : 28
@@ -46,17 +46,17 @@ function draw() {
   ctx.lineWidth = 14
   ctx.lineCap = 'round'
   ctx.stroke()
-  ctx.strokeStyle = dark ? '#5be3b3' : '#0b6b4e'
+  ctx.strokeStyle = dark ? '#b8d7b2' : '#3b823f'
   ctx.lineWidth = 2
   ctx.stroke()
 
-  const colors: Record<string, string> = { low: '#5be3b3', medium: '#f6c453', high: '#ff8a3d', critical: '#ff4d3d' }
+  const colors: Record<string, string> = { low: '#b8d7b2', medium: '#8cbf86', high: '#3b823f', critical: '#e9f2e5' }
   props.anomalies.forEach((a) => {
     const x = xAt(Number(a.distanceM || 0))
     const y = baseY(x)
     const depth = Number(a.depthPct || 10)
     const bar = Math.max(5, (depth / 100) * (plotBottom - plotTop) * .55)
-    const color = colors[a.severity] || '#5be3b3'
+    const color = colors[a.severity] || '#b8d7b2'
     ctx.beginPath(); ctx.moveTo(x, y - 4); ctx.lineTo(x, y - 4 - bar)
     ctx.strokeStyle = color; ctx.lineWidth = props.compact ? 3 : 2; ctx.stroke()
     ctx.beginPath(); ctx.arc(x, y, props.compact ? 4 : 5, 0, Math.PI * 2)
