@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Pause, Play } from 'lucide-vue-next'
+import { ArrowUpRight, Check } from 'lucide-vue-next'
 
 const slides = [
   {
@@ -45,17 +45,12 @@ const slides = [
 ]
 
 const index = ref(0)
-const paused = ref(false)
 const current = computed(() => slides[index.value])
 let timer: ReturnType<typeof setInterval> | undefined
 function next() { index.value = (index.value + 1) % slides.length }
-function prev() { index.value = (index.value - 1 + slides.length) % slides.length }
-function go(i: number) { index.value = i }
-function restart() { if (timer) clearInterval(timer); if (!paused.value) timer = setInterval(next, 7000) }
-function toggle() { paused.value = !paused.value; restart() }
+function restart() { if (timer) clearInterval(timer); timer = setInterval(next, 7000) }
 onMounted(restart)
 onBeforeUnmount(() => { if (timer) clearInterval(timer) })
-watch(index, restart)
 </script>
 
 <template>
@@ -63,10 +58,7 @@ watch(index, restart)
     <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(17,22,18,.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(17,22,18,.035)_1px,transparent_1px)] bg-[size:64px_64px]" />
     <div class="wrap relative grid min-h-[calc(100svh-108px)] items-center gap-10 py-10 lg:grid-cols-12 lg:gap-10 lg:py-12">
       <div class="lg:col-span-7">
-        <div class="flex items-center justify-between gap-4">
-          <p class="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-bone px-3.5 py-1.5 font-sans text-[11px] font-semibold uppercase tracking-[.08em] text-ink/75"><span class="size-1.5 rounded-full bg-vomtek" /> Specialist capability</p>
-          <p class="font-sans text-[12px] font-semibold tabular-nums text-ink/55">{{ String(index + 1).padStart(2, '0') }} / {{ String(slides.length).padStart(2, '0') }}</p>
-        </div>
+        <p class="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-bone px-3.5 py-1.5 font-sans text-[11px] font-semibold uppercase tracking-[.08em] text-ink/75"><span class="size-1.5 rounded-full bg-vomtek" /> Specialist capability</p>
 
         <div class="mt-6 min-h-[330px] md:min-h-[355px]" aria-live="polite">
           <Transition mode="out-in" enter-active-class="transition duration-300 ease-out" enter-from-class="translate-y-3 opacity-0" leave-active-class="transition duration-150 ease-in" leave-to-class="-translate-y-2 opacity-0">
@@ -84,14 +76,6 @@ watch(index, restart)
           <NuxtLink to="/contact" class="btn btn-outline">Request a quote</NuxtLink>
         </div>
 
-        <div class="mt-7 flex items-center gap-3 border-t border-ink/10 pt-4">
-          <button type="button" class="flex size-9 items-center justify-center rounded-full border border-ink/15 text-ink/65 transition-colors hover:border-vomtek hover:text-vomtek" aria-label="Previous capability" @click="prev"><ArrowLeft :size="14" /></button>
-          <button type="button" class="flex size-9 items-center justify-center rounded-full border border-ink/15 text-ink/65 transition-colors hover:border-vomtek hover:text-vomtek" :aria-label="paused ? 'Play carousel' : 'Pause carousel'" @click="toggle"><Play v-if="paused" :size="13" /><Pause v-else :size="13" /></button>
-          <button type="button" class="flex size-9 items-center justify-center rounded-full border border-ink/15 text-ink/65 transition-colors hover:border-vomtek hover:text-vomtek" aria-label="Next capability" @click="next"><ArrowRight :size="14" /></button>
-          <div class="ml-2 flex flex-1 items-center gap-1.5">
-            <button v-for="(slide, i) in slides" :key="slide.kicker" type="button" class="h-1.5 flex-1 overflow-hidden rounded-full bg-ink/10" :aria-label="`Show ${slide.kicker}`" @click="go(i)"><span class="block h-full rounded-full bg-vomtek transition-all duration-500" :class="i === index ? 'w-full' : 'w-0'" /></button>
-          </div>
-        </div>
       </div>
 
       <div class="lg:col-span-5">
