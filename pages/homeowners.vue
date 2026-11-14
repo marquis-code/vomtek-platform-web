@@ -15,7 +15,7 @@ const steps = [
           <p class="label-mono text-signal-deep">For homeowners and property managers</p>
           <h1 class="type-page-hero mt-4 font-display leading-[.92] tracking-[-.055em]">Know your drains.<br><span class="text-vomtek">Before you dig.</span></h1>
           <p class="mt-5 max-w-lg text-[17px] leading-relaxed text-ink/75">A blocked drain or mystery leak should not start with a $5,000 guess. Upload a camera video and get a simple report, a repair plan and real prices from local contractors.</p>
-          <div class="mt-7 flex flex-wrap gap-2"><NuxtLink to="/login" class="btn btn-dark">Check my drains <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/rentals" class="btn btn-outline">Rent a camera kit</NuxtLink></div>
+          <div class="mt-7 flex flex-wrap gap-2"><NuxtLink to="/signup" class="btn btn-dark">Check my drains <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/rentals" class="btn btn-outline">Rent a camera kit</NuxtLink></div>
           <div class="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-[11.5px] text-ink/75"><span class="flex items-center gap-2"><ShieldCheck :size="14" class="text-vomtek" /> Report in 24 hours</span><span class="flex items-center gap-2"><FileCheck2 :size="14" class="text-vomtek" /> Written report</span><span class="flex items-center gap-2"><HandCoins :size="14" class="text-vomtek" /> Pay when work is approved</span></div>
         </div>
         <div class="lg:col-span-5">
@@ -41,6 +41,6 @@ const steps = [
       </div>
     </section>
 
-    <section class="bg-signal py-14 text-ink md:py-20"><div class="wrap grid gap-6 md:grid-cols-[1fr_auto] md:items-center"><div><p class="label-mono">From $149 · report in 24 hours</p><h2 class="mt-3 max-w-[17ch] font-display text-[clamp(2.5rem,4.5vw,4.2rem)] leading-[.95] tracking-[-.05em]">Stop guessing. Start with the video you already have.</h2></div><NuxtLink to="/login" class="btn btn-dark">Check my drains <ArrowUpRight :size="14" /></NuxtLink></div></section>
+    <section class="bg-signal py-14 text-ink md:py-20"><div class="wrap grid gap-6 md:grid-cols-[1fr_auto] md:items-center"><div><p class="label-mono">From $149 · report in 24 hours</p><h2 class="mt-3 max-w-[17ch] font-display text-[clamp(2.5rem,4.5vw,4.2rem)] leading-[.95] tracking-[-.05em]">Stop guessing. Start with the video you already have.</h2></div><NuxtLink to="/signup" class="btn btn-dark">Check my drains <ArrowUpRight :size="14" /></NuxtLink></div></section>
   </div>
 </template>

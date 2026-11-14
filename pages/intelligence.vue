@@ -15,7 +15,7 @@ const features = [
           <p class="label-mono text-vomtek">For pipeline and utility teams</p>
           <h1 class="type-page-hero mt-5 max-w-[13ch]">Know what needs fixing.<br><span class="text-vomtek">Before it fails.</span></h1>
           <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-ink/70">Upload the inspection you already have. We show you what is damaged, what can wait, and what to repair first — without another long report backlog.</p>
-          <div class="mt-8 flex flex-wrap gap-2"><NuxtLink to="/login" class="btn btn-brand">Try it with one inspection <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/contact" class="btn btn-outline">Talk to our team</NuxtLink></div>
+          <div class="mt-8 flex flex-wrap gap-2"><NuxtLink to="/signup" class="btn btn-brand">Try it with one inspection <ArrowUpRight :size="14" /></NuxtLink><NuxtLink to="/contact" class="btn btn-outline">Talk to our team</NuxtLink></div>
           <div class="mt-10 grid max-w-3xl grid-cols-2 gap-6 border-t border-ink/10 pt-6 sm:grid-cols-4"><div v-for="s in [{n:'Minutes',l:'to first findings'},{n:'99.1%',l:'of findings checked'},{n:'Side by side',l:'inspection comparison'},{n:'Safety',l:'industry check'}]" :key="s.l"><p class="font-display text-[22px] font-semibold">{{ s.n }}</p><p class="label-mono mt-1 text-ink/65">{{ s.l }}</p></div></div>
         </div>
         <div class="lg:col-span-5">
@@ -40,7 +40,7 @@ const features = [
     <section class="section-y border-y border-ink/10 bg-bone">
       <div class="wrap grid gap-10 lg:grid-cols-12">
         <div class="lg:col-span-6"><div class="overflow-hidden rounded-2xl border border-ink/15 bg-ink p-4 text-bone"><AnomalyCanvas :anomalies="[{distanceM:4800,depthPct:18,severity:'low'},{distanceM:12800,depthPct:28,severity:'medium'},{distanceM:21400,depthPct:68,severity:'critical'},{distanceM:30200,depthPct:42,severity:'high'},{distanceM:39800,depthPct:16,severity:'low'}]" :length-km="48.2" :height="300" /></div></div>
-        <div class="lg:col-span-6 lg:pl-8"><SectionLabel index="02">What you get</SectionLabel><h2 class="mt-6 type-lg max-w-[12ch]">A clear list of what to fix first.</h2><ul class="mt-6 space-y-4"><li v-for="item in ['Where the problem is and how big it is','Whether the pipe is still safe at its current pressure','How much the problem grew since the last inspection','How long the pipe can safely stay in service','Whether to repair, watch or inspect again']" :key="item" class="flex items-start gap-3 border-b border-ink/10 pb-3 text-[14px] text-ink/75"><Check :size="15" class="mt-0.5 shrink-0 text-mint-deep" />{{ item }}</li></ul><NuxtLink to="/login" class="btn btn-dark mt-7">Open a live report <ArrowUpRight :size="13" /></NuxtLink></div>
+        <div class="lg:col-span-6 lg:pl-8"><SectionLabel index="02">What you get</SectionLabel><h2 class="mt-6 type-lg max-w-[12ch]">A clear list of what to fix first.</h2><ul class="mt-6 space-y-4"><li v-for="item in ['Where the problem is and how big it is','Whether the pipe is still safe at its current pressure','How much the problem grew since the last inspection','How long the pipe can safely stay in service','Whether to repair, watch or inspect again']" :key="item" class="flex items-start gap-3 border-b border-ink/10 pb-3 text-[14px] text-ink/75"><Check :size="15" class="mt-0.5 shrink-0 text-mint-deep" />{{ item }}</li></ul><NuxtLink to="/signup" class="btn btn-dark mt-7">Open a live report <ArrowUpRight :size="13" /></NuxtLink></div>
       </div>
     </section>
 
